@@ -1,0 +1,11 @@
+{% extends "expenses/layout.html" %}
+
+{% block body %}
+        <h1>Add Expense</h1>
+       <form action="{% url 'expenses:add' %}" method="post">
+           {% csrf_token %}
+           {{ form }}
+           <input type="submit">
+       </form>
+       <a href="{% url 'expenses:index' %}">View Expenses</a>
+{% endblock %}

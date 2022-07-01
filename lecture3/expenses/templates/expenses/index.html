@@ -1,0 +1,11 @@
+{% extends "expenses/layout.html" %}
+
+{% block body %}
+        <h1>Expenses</h1>
+        <ul>
+            {% for expense in expenses %}
+                <li>{{ expense }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'expenses:add' %}">Add a New Expense</a>
+{% endblock %}
