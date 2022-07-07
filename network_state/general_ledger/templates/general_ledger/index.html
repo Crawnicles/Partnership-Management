@@ -1,0 +1,10 @@
+{% extends "general_ledger/layout.html" %}
+
+{% block body %}
+    <h1>General Ledger</h1>
+    <ul>
+        {% for transaction in general_ledger %}
+            <li>Transaction {{ transaction.id }}: {{ transaction.person }} moves {{ transaction.amount }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

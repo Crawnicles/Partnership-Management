@@ -1,0 +1,11 @@
+{% extends "general_ledger/layout.html" %}
+
+{% block body %}
+    <h1>Transaction {{ transaction.id }}</h1>
+
+    <ul>
+        <li>Person: {{ transaction.person }}</li>
+        <li>Amount: {{ transaction.amount }}</li>
+        <li>Credit = True, Debit = False - {{ transaction.direction }}</li>
+    </ul>
+{% endblock %}
